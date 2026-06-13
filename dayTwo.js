@@ -33,10 +33,23 @@
 
 // Write a function titleCase(str) that capitalizes the first letter of every word in a string.
 // Input: 'hello world'  → Output: 'Hello World'
-function titleCase(str) {
-    return str
-        .split(" ")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
+// function titleCase(str) {
+//     return str
+//         .split(" ")
+//         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+//         .join(" ");
+// }
+// console.log(titleCase("hello world"));
+
+// Write a function countChar(str, char) that returns how many times a character appears in a string.
+// Input: 'banana', 'a'  → Output: 3
+function countChar(str, char) {
+    let total = 0;
+    for (const strChar of str) {
+        if (strChar.toLowerCase() === char.toLowerCase()) {
+            total++;
+        }
+    }
+    return total;
 }
-console.log(titleCase("hello world"));
+console.log(countChar("Rakeeb Hasan", "a"));
