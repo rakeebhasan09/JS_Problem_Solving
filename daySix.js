@@ -6,3 +6,20 @@ const frequency = fruits.reduce((acc, fruit) => {
 }, {});
 
 console.log(frequency);
+
+
+নিচের object থেকে street, city এবং country console-এ দেখাও।
+
+const user = {
+  name: "Rakeeb",
+  email: "rakeeb@gmail.com",
+  address: {
+    street: "College Road",
+    city: "Mymensingh",
+    country: "Bangladesh"
+  }
+};
+
+console.log(user.address.street);
+console.log(user.address.city);
+console.log(user.address.country);
