@@ -23,3 +23,17 @@ const user = {
 console.log(user.address.street);
 console.log(user.address.city);
 console.log(user.address.country);
+
+
+Count Words in a Sentence
+
+const sentence = "javascript is easy and javascript is powerful";
+
+const words = sentence.toLowerCase().split(" ");
+
+const result = words.reduce((acc, word) => {
+  acc[word] = (acc[word] || 0) + 1;
+  return acc;
+}, {});
+
+console.log(result);
