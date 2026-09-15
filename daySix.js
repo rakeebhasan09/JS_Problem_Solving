@@ -37,3 +37,28 @@ const result = words.reduce((acc, word) => {
 }, {});
 
 console.log(result);
+
+
+Group Students by Grade
+const students = [
+  { name: "A", grade: "A" },
+  { name: "B", grade: "B" },
+  { name: "C", grade: "A" },
+  { name: "D", grade: "C" },
+  { name: "E", grade: "B" },
+  { name: "F", grade: "A" }
+];
+
+const result = students.reduce((acc, student) => {
+  const grade = student.grade;
+
+  if (!acc[grade]) {
+    acc[grade] = [];
+  }
+
+  acc[grade].push(student.name);
+
+  return acc;
+}, {});
+
+console.log(result);
