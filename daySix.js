@@ -62,3 +62,24 @@ const result = students.reduce((acc, student) => {
 }, {});
 
 console.log(result);
+
+
+
+
+const products = [
+  { name: "Laptop", price: 80000 },
+  { name: "Mouse", price: 1500 },
+  { name: "Keyboard", price: 3000 },
+  { name: "Monitor", price: 25000 },
+  { name: "Headphone", price: 5000 }
+];
+
+function filterProducts(products, minPrice, maxPrice) {
+  return products.filter(product => {
+    return product.price >= minPrice && product.price <= maxPrice;
+  });
+}
+
+const result = filterProducts(products, 3000, 30000);
+
+console.log(result);
