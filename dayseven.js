@@ -28,3 +28,22 @@ if (user) {
 } else {
   console.log("Invalid email or password");
 }
+
+
+
+Find the Second Largest Number
+const numbers = [10, 5, 20, 8, 20, 15];
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let num of numbers) {
+  if (num > largest) {
+    secondLargest = largest;
+    largest = num;
+  } else if (num < largest && num > secondLargest) {
+    secondLargest = num;
+  }
+}
+
+console.log(secondLargest); // 15
