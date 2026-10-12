@@ -47,3 +47,27 @@ for (let num of numbers) {
 }
 
 console.log(secondLargest); // 15
+
+
+Find the Most Frequent Element
+const numbers = [1, 3, 2, 3, 4, 3, 2, 2, 2];
+
+const frequency = {};
+
+for (let num of numbers) {
+  frequency[num] = (frequency[num] || 0) + 1;
+}
+
+let mostFrequent = null;
+let maxCount = 0;
+
+for (let num in frequency) {
+  if (frequency[num] > maxCount) {
+    maxCount = frequency[num];
+    mostFrequent = Number(num);
+  }
+}
+
+console.log(mostFrequent); // 2
+console.log(maxCount);     // 4
+console.log(frequency);
