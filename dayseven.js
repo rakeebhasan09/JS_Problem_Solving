@@ -71,3 +71,21 @@ for (let num in frequency) {
 console.log(mostFrequent); // 2
 console.log(maxCount);     // 4
 console.log(frequency);
+
+
+
+Search Users by Name
+const users = [
+  { name: "Rahim Hasan" },
+  { name: "Karim Ahmed" },
+  { name: "Abdur Rahim" },
+  { name: "Sakib Khan" }
+];
+
+const searchTerm = "rahim";
+
+const result = users.filter(user =>
+  user.name.toLowerCase().includes(searchTerm.toLowerCase())
+);
+
+console.log(result);
