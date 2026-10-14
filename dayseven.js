@@ -89,3 +89,19 @@ const result = users.filter(user =>
 );
 
 console.log(result);
+
+
+Remove Duplicate Objects
+const users = [
+  { id: 1, name: "Rahim" },
+  { id: 2, name: "Karim" },
+  { id: 1, name: "Rahim" },
+  { id: 3, name: "Hasan" },
+  { id: 2, name: "Karim" }
+];
+
+const result = users.filter((user, index, arr) => {
+  return index === arr.findIndex(item => item.id === user.id);
+});
+
+console.log(result);
