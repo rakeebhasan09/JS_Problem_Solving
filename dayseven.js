@@ -105,3 +105,17 @@ const result = users.filter((user, index, arr) => {
 });
 
 console.log(result);
+
+
+
+Check Anagrams
+function isAnagram(str1, str2) {
+  const word1 = str1.toLowerCase().split("").sort().join("");
+  const word2 = str2.toLowerCase().split("").sort().join("");
+
+  return word1 === word2;
+}
+
+console.log(isAnagram("listen", "silent")); // true
+console.log(isAnagram("hello", "world"));   // false
+console.log(isAnagram("Dormitory", "Dirtyroom")); // true
