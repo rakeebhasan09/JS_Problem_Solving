@@ -107,7 +107,6 @@ const result = users.filter((user, index, arr) => {
 console.log(result);
 
 
-Find Longest Word
 
 Check Anagrams
 function isAnagram(str1, str2) {
@@ -121,6 +120,8 @@ console.log(isAnagram("listen", "silent")); // true
 console.log(isAnagram("hello", "world"));   // false
 console.log(isAnagram("Dormitory", "Dirtyroom")); // true
 
+
+Find Longest Word
 
 const sentence = "I am learning JavaScript programming";
 
