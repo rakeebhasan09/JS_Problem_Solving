@@ -130,3 +130,14 @@ const result = sentence.split(" ").reduce((longest, current) => {
 });
 
 console.log(result);
+
+
+
+
+Find the Difference Between Arrays
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [2, 4, 6];
+
+const result = arr1.filter(num => !arr2.includes(num));
+
+console.log(result);
