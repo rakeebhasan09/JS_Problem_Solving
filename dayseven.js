@@ -141,3 +141,28 @@ const arr2 = [2, 4, 6];
 const result = arr1.filter(num => !arr2.includes(num));
 
 console.log(result);
+
+
+
+Group Orders by Status
+const orders = [
+  { id: 1, status: "pending" },
+  { id: 2, status: "completed" },
+  { id: 3, status: "pending" },
+  { id: 4, status: "cancelled" },
+  { id: 5, status: "completed" }
+];
+
+const result = orders.reduce((acc, order) => {
+  const status = order.status;
+
+  if (!acc[status]) {
+    acc[status] = [];
+  }
+
+  acc[status].push(order.id);
+
+  return acc;
+}, {});
+
+console.log(result);
